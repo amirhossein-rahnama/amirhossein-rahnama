@@ -37,19 +37,40 @@ Profile → camera icon on the banner → Upload.
 
 ---
 
-# Two things worth doing next
+# The contribution graph
 
-**1. Your contribution graph is probably lying.** Nine contributions in a year doesn't match six
-years of professional work. The usual cause is commits authored under an email GitHub doesn't
-know about. Check what you're committing as:
+It is **not part of the README** — it's GitHub's own profile UI, rendered below whatever your
+README contains. No README edit can remove it.
+
+**To actually hide it:** Settings → Public profile → Contributions & Activity →
+**"Make profile private and hide activity."**
+
+Per [GitHub's docs](https://docs.github.com/en/account-and-profile/concepts/about-your-profile),
+a private profile hides:
+
+> Achievements and highlights · Activity overview and activity feed · **Contribution graph** ·
+> Follower and following counts · Follow and Sponsor buttons · Organization memberships ·
+> Stars, projects, packages, and sponsoring tabs · Your pronouns
+
+and keeps **README, bio and profile picture** publicly visible. So the README you just installed
+survives intact and effectively becomes your whole profile — which is the outcome you want.
+
+Two caveats: the docs don't state whether **pinned repositories** survive, so check your profile
+after toggling and untick it if they vanish. And it only applies going forward — it doesn't erase
+past activity, and your activity on public repos stays visible on those repos.
+
+**Consider filling the graph instead of hiding it.** Nine contributions in a year doesn't match
+six years of professional work. The usual cause is commits authored under an email GitHub doesn't
+recognise. Check what you commit as:
 
 ```bash
 git config user.email
 ```
 
-If that isn't an email listed under **Settings → Emails**, add it there. GitHub **retroactively**
-recounts past commits once the address is linked — graphs often fill in years of history. Also
-enable **Settings → Profile → Include private contributions on my profile**.
+If that isn't listed under **Settings → Emails**, add it. GitHub **retroactively** recounts past
+commits once the address is linked — graphs often fill in years of history at once. Also enable
+**Settings → Public profile → Include private contributions on my profile**. Try this first; a
+full graph beats a hidden one.
 
 **2. Set descriptions and topics on the four featured repos.** They're all currently blank, so
 anyone who clicks through from the README lands on a bare file list. Repo page → ⚙️ next to

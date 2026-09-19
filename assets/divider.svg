@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="26" viewBox="0 0 1280 26" role="img" aria-label="">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#0D1117"/><stop offset="55%" stop-color="#0A0E14"/><stop offset="100%" stop-color="#080B10"/>
+</linearGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#58A6FF"/><stop offset="50%" stop-color="#39D0D8"/><stop offset="100%" stop-color="#A371F7"/>
+</linearGradient>
+<linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#FFFFFF"/><stop offset="42%" stop-color="#58A6FF"/>
+  <stop offset="76%" stop-color="#39D0D8"/><stop offset="100%" stop-color="#A371F7"/>
+</linearGradient>
+<linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#58A6FF" stop-opacity="0"/><stop offset="22%" stop-color="#58A6FF"/>
+  <stop offset="55%" stop-color="#39D0D8"/><stop offset="82%" stop-color="#A371F7"/>
+  <stop offset="100%" stop-color="#A371F7" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="au1"><stop offset="0%" stop-color="#58A6FF" stop-opacity="0.30"/><stop offset="100%" stop-color="#58A6FF" stop-opacity="0"/></radialGradient>
+<radialGradient id="au2"><stop offset="0%" stop-color="#39D0D8" stop-opacity="0.26"/><stop offset="100%" stop-color="#39D0D8" stop-opacity="0"/></radialGradient>
+<radialGradient id="au3"><stop offset="0%" stop-color="#A371F7" stop-opacity="0.28"/><stop offset="100%" stop-color="#A371F7" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+  <path d="M32 0 L0 0 0 32" fill="none" stroke="#1B2029" stroke-width="1"/>
+</pattern>
+<filter id="soft" x="-90%" y="-90%" width="280%" height="280%">
+  <feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+  <feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<!-- rects, not lines: a gradient stroke on a zero-height line has a degenerate bbox and never paints.
+     Two halves with a real gap, so nothing opaque is painted behind the diamond (which would
+     show as a dark bar on light backgrounds). userSpaceOnUse keeps one gradient across both. -->
+<linearGradient id="rule" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="0">
+  <stop offset="0%" stop-color="#58A6FF" stop-opacity="0"/><stop offset="22%" stop-color="#58A6FF"/>
+  <stop offset="55%" stop-color="#39D0D8"/><stop offset="82%" stop-color="#A371F7"/>
+  <stop offset="100%" stop-color="#A371F7" stop-opacity="0"/>
+</linearGradient>
+<rect x="0" y="11.9" width="623.0" height="2.2" fill="url(#rule)" opacity="0.9"/>
+<rect x="657.0" y="11.9" width="623.0" height="2.2" fill="url(#rule)" opacity="0.9"/>
+<rect x="-5.5" y="-5.5" width="11" height="11" fill="none" stroke="#39D0D8" stroke-width="1.8"
+      transform="translate(640.0 13.0)">
+  <animateTransform attributeName="transform" type="rotate" values="45;135;45" dur="9s"
+                    additive="sum" repeatCount="indefinite"/>
+</rect>
+<circle r="2.4" cy="13.0" fill="#39D0D8" filter="url(#soft)">
+  <animate attributeName="cx" from="-10" to="1290" dur="8s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;1;1;0" dur="8s" repeatCount="indefinite"/></circle>
+</svg>
